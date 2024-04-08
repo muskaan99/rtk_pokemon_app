@@ -1,11 +1,11 @@
 // to display the details of a selected pokemon
 
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchPokemon } from '../api/pokemonApi';
-import { RootState } from '../store/store';
-import { setPokemons, setSelectedPokemon } from '../store/pokemonSlice';
-import Link from 'next/link';
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchPokemon } from "../api/pokemonApi";
+import { RootState } from "../store/store";
+import { setPokemons, setSelectedPokemon } from "../store/pokemonSlice";
+import Link from "next/link";
 
 const PokemonList: React.FC = () => {
   const dispatch = useDispatch();
@@ -17,7 +17,7 @@ const PokemonList: React.FC = () => {
         const data = await fetchPokemon();
         dispatch(setPokemons(data.results));
       } catch (error) {
-        console.error('Failed to fetch Pokemon data:', error);
+        console.error("Failed to fetch Pokemon data:", error);
       }
     };
 
@@ -30,9 +30,7 @@ const PokemonList: React.FC = () => {
       <ul>
         {pokemons.map((pokemon: any) => (
           <li key={pokemon.id}>
-            <Link href={`/pokemon/${pokemon.name}`}>
-              <a>{pokemon.name}</a>
-            </Link>
+            <Link href={`/pokemon/${pokemon.name}`}>{pokemon.name}</Link>
           </li>
         ))}
       </ul>
