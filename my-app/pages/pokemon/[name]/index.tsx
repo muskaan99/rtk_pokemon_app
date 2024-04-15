@@ -51,8 +51,8 @@ const PokemonImageContainer = styled.div`
 const PokemonImage = styled.img`
   position: absolute;
   top: 300px;
-  right: 250px; /* Adjust the position as needed */
-  max-width: 1000px; /* Adjust the size as needed */
+  right: 250px; 
+  max-width: 1000px; 
 `;
 
 const Pokemon = (props: Props) => {
