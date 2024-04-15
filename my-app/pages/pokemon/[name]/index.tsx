@@ -10,13 +10,15 @@ const PokemonContainer = styled.div`
   justify-content: center;
   align-items: center;
   height: 50%;
-  width: 70%;
+  width: 30%;
   border: 1px solid black;
   box-shadow: 0 10 10px rgba(77, 77, 77, 0.589);
   border-radius: 10px;
   background: linear-gradient(45deg, #050505 0%,#0505054a ,#05050566 70%, #f7f6f6 100%);
   color: black;
+  padding: 20px;
   overflow: auto;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 `;
 
 const ListContainer = styled.div`
@@ -31,6 +33,26 @@ const ListContainer = styled.div`
   background: linear-gradient(45deg, #050505 0%,#0505054a ,#05050566 70%, #f7f6f6 100%);
   color: black;
   overflow: auto;
+`;
+
+const PokemonName = styled.div`
+  position: absolute;
+  top: 20px;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+`;
+
+const PokemonImageContainer = styled.div`
+  margin-top: 40px;
+`;
+
+const PokemonImage = styled.img`
+  position: absolute;
+  top: 300px;
+  right: 250px; /* Adjust the position as needed */
+  max-width: 1000px; /* Adjust the size as needed */
 `;
 
 const Pokemon = (props: Props) => {
@@ -76,28 +98,32 @@ const Pokemon = (props: Props) => {
       {loading && pokemon ? (
         <div>Loading ...</div>
       ) : (
-        <PokemonContainer>
-          <div>{pokemon?.name}</div>
-          <ListContainer>
-            {pokemon?.types.map((type: any, index: number) => (
-              <div key={index}>{type.type.name}</div>
-            ))}
-          </ListContainer>
-          <ListContainer>
-            {pokemon?.abilities?.map((ability: any, index: number) => (
-              <div key={index + 1000}>{ability.ability.name}</div>
-            ))}
-          </ListContainer>
-          <ListContainer>
-            {pokemon?.moves.map((move: any, index: number) => (
-              <div key={index + 10000}>{move.move.name}</div>
-            ))}
-          </ListContainer>
-
-          <div>
-            <img src={pokemon?.sprites?.front_default} alt={pokemon?.name} />
-          </div>
-        </PokemonContainer>
+        <>
+          <PokemonContainer>
+            <PokemonName>{pokemon?.name}</PokemonName>
+            <ListContainer>
+              {pokemon?.types.map((type: any, index: number) => (
+                <div key={index}>{type.type.name}</div>
+              ))}
+            </ListContainer>
+            <ListContainer>
+              {pokemon?.abilities?.map((ability: any, index: number) => (
+                <div key={index + 1000}>{ability.ability.name}</div>
+              ))}
+            </ListContainer>
+            <ListContainer>
+              {pokemon?.moves.map((move: any, index: number) => (
+                <div key={index + 10000}>{move.move.name}</div>
+              ))}
+            </ListContainer>
+          </PokemonContainer>
+          <PokemonImageContainer>
+            <PokemonImage
+              src={pokemon?.sprites?.front_default}
+              alt={pokemon?.name}
+            />
+          </PokemonImageContainer>
+        </>
       )}
     </div>
   );
