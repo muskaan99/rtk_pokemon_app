@@ -14,7 +14,13 @@ const PokemonContainer = styled.div`
   border: 1px solid black;
   box-shadow: 0 10 10px rgba(77, 77, 77, 0.589);
   border-radius: 10px;
-  background: linear-gradient(45deg, #050505 0%,#0505054a ,#05050566 70%, #f7f6f6 100%);
+  background: linear-gradient(
+    45deg,
+    #050505 0%,
+    #0505054a,
+    #05050566 70%,
+    #f7f6f6 100%
+  );
   color: black;
   padding: 20px;
   overflow: auto;
@@ -22,7 +28,6 @@ const PokemonContainer = styled.div`
 `;
 
 const ListContainer = styled.div`
- 
   height: 80%;
   width: max-content;
   padding: 10px;
@@ -30,7 +35,13 @@ const ListContainer = styled.div`
   border: 1px solid black;
   box-shadow: 0 10 10px rgba(77, 77, 77, 0.589);
   border-radius: 10px;
-  background: linear-gradient(45deg, #050505 0%,#0505054a ,#05050566 70%, #f7f6f6 100%);
+  background: linear-gradient(
+    45deg,
+    #050505 0%,
+    #0505054a,
+    #05050566 70%,
+    #f7f6f6 100%
+  );
   color: black;
   overflow: auto;
 `;
@@ -45,14 +56,23 @@ const PokemonName = styled.div`
 `;
 
 const PokemonImageContainer = styled.div`
-  margin-top: 40px;
+  /* margin-top: 40px; */
+  border: 1px solid black;
+  height: 50%;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const PokemonImage = styled.img`
-  position: absolute;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  /* position: absolute;
   top: 300px;
   right: 250px; 
-  max-width: 1000px; 
+  max-width: 1000px;  */
 `;
 
 const Pokemon = (props: Props) => {
