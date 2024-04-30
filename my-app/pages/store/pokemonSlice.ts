@@ -13,7 +13,7 @@ interface PokemonState {
   selectedPokemon: Pokemon | null;
 }
 
-const initialState: PokemonState = {
+export const initialState: PokemonState = {
   pokemons: [],
   selectedPokemon: null,
 };
