@@ -1,5 +1,5 @@
-import  { setPokemons, setSelectedPokemon } from '../pages/store/pokemonSlice';
-import reducer, { initialState } from '../pages/store/pokemonSlice';
+import  { setPokemons, setSelectedPokemon } from '../../pages/store/pokemonSlice';
+import reducer, { initialState } from '../../pages/store/pokemonSlice';
 
 //TEST: ACTIONS
 describe('pokemonSlice actions', () => {

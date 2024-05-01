@@ -1,6 +1,6 @@
 // pokemonApi.test.ts
 
-import { fetchPokemon } from '../pages/api/pokemonApi';
+import { fetchPokemon } from '../../pages/api/pokemonApi';
 
 //Test fetch pokemon to check APi call
 describe('fetchPokemon', () => {
