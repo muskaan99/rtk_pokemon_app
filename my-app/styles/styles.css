@@ -1,0 +1,22 @@
+.addButton {
+    background-color: red;
+    color: black;
+  }
+  
+  .removeButton {
+    background-color: green;
+    color: black;
+  }
+
+  .container {
+    display: flex;
+  }
+  
+  .pokemonList {
+    flex: 1; 
+    margin-right: 20px; 
+  }
+  
+  .favoritesList {
+    width: 250px; 
+  }

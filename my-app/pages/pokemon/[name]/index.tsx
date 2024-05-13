@@ -143,6 +143,8 @@ const Pokemon = (props: Props) => {
               alt={pokemon?.name}
             />
           </PokemonImageContainer>
+          {/* test button */}
+          <button onClick={() => alert("Test button clicked")}>Test</button> Test button
         </>
       )}
     </div>
