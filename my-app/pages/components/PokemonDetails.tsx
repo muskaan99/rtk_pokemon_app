@@ -7,7 +7,7 @@ import { RootState } from "../store/store";
 import { setPokemons, setSelectedPokemon } from "../store/pokemonSlice";
 import Link from "next/link";
 
-const PokemonList: React.FC = () => {
+const PokemonDetails: React.FC = () => {
   const dispatch = useDispatch();
   const pokemons = useSelector((state: RootState) => state.pokemon.pokemons);
 
@@ -38,4 +38,4 @@ const PokemonList: React.FC = () => {
   );
 };
 
-export default PokemonList;
+export default PokemonDetails;
