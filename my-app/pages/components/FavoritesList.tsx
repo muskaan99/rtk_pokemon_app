@@ -13,7 +13,7 @@ const FavoritesList: React.FC = () => {
 
   return (
     <div>
-      <h2>Favorites List</h2>
+      <h1>Favorites </h1>
       <ul>
         {favorites.map((pokemon: any) => (
           <li key={pokemon.id}>
@@ -22,7 +22,7 @@ const FavoritesList: React.FC = () => {
           </li>
         ))}
       </ul>
-      <button onClick={() => alert("Test button clicked")}>Test</button> {/* Test button */}
+      
     </div>
   );
 };

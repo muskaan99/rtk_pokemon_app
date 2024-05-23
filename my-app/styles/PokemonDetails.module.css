@@ -1,0 +1,38 @@
+.pokemon-item {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+}
+
+.addButton {
+    background-color: red;
+    color: white;
+  }
+  
+  .removeButton {
+    background-color: green;
+    color: white;
+  }
+
+  .container {
+    display: flex;
+    position: relative;
+  }
+  
+  .pokemonDetail {
+    flex: 1; 
+    margin-right: 20px; 
+  }
+  
+  .favoritesList {
+    width: 250px; 
+  }
+
+  .separator {
+    height: 100%;
+    width: 1px;
+    background-color: #000;
+    position: absolute;
+    left: calc(100% - 250px); 
+    top: 0;
+}
