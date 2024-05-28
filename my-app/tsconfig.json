@@ -14,8 +14,9 @@
     "incremental": true,
     "paths": {
       "@/*": ["./*"]
-    }
+    },
+    "types": ["@testing-library/jest-dom", "jest"]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx","tests/**/*.ts", "tests/**/*.tsx"],
   "exclude": ["node_modules"]
 }

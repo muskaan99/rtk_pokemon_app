@@ -3,8 +3,9 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 interface Pokemon {
-  id: number;
+  // id: number;
   name: string;
+  url: string;    
   // will add more properties when required
 }
 
@@ -31,13 +32,13 @@ const pokemonSlice = createSlice({
       state.selectedPokemon = action.payload;
     },
     addToFavorites(state, action: PayloadAction<Pokemon>) {
-      const existingPokemon = state.favorites.find(pokemon => pokemon.id === action.payload.id);
+      const existingPokemon = state.favorites.find(pokemon => pokemon.url  === action.payload.url );
       if (!existingPokemon) {
         state.favorites.push(action.payload); 
       }
     },
-    removeFromFavorites(state, action: PayloadAction<number>) {
-      state.favorites = state.favorites.filter(pokemon => pokemon.id !== action.payload); 
+    removeFromFavorites(state, action: PayloadAction<string>) {
+      state.favorites = state.favorites.filter(pokemon => pokemon.url !== action.payload);
     },
   },
 });

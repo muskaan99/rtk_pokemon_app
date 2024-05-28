@@ -35,16 +35,17 @@ const PokemonDetails: React.FC = () => {
     dispatch(addToFavorites(pokemon));
   };
 
-  const handleRemoveFromFavorites = (pokemonId: number) => {
-    dispatch(removeFromFavorites(pokemonId));
+  const handleRemoveFromFavorites = (pokemonUrl: string) => {
+    dispatch(removeFromFavorites(pokemonUrl));
   };
+
   return (
     <div className={styles.container}>
        <div className={styles.pokemonDetail}> 
-      <h1>Pokemon List</h1>
-      <ul>
+       <h1 className={styles.heading}>Pokemon List</h1>
+       <ul className={styles.pokemonList}>
         {pokemons.map((pokemon: any) => (
-          <li key={pokemon.id} className="pokemon-item">
+          <li key={pokemon.url} className={`${styles.pokemonItem} ${styles.pokemonListItem}`}>
             <Link href={`/pokemon/${pokemon.name}`}>{pokemon.name}</Link>
             <button
                 className={styles.addButton}
@@ -52,12 +53,12 @@ const PokemonDetails: React.FC = () => {
               >
                 Add
               </button>
-              <button
+              {/* <button
                 className={styles.removeButton}
-                onClick={() => handleRemoveFromFavorites(pokemon.id)}
+                onClick={() => handleRemoveFromFavorites(pokemon.url)}
               >
                 Remove
-              </button>
+              </button> */}
           </li>
         ))}
       </ul>

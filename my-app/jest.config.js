@@ -9,4 +9,6 @@
 module.exports = {
   preset: "ts-jest",
   testEnvironment: "node",
+  setupFilesAfterEnv: ['C:/Users/muska/Documents/RipeMetrics/rtk_pokemon_app/my-app/__tests__/jest.setup.ts'], 
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
 };

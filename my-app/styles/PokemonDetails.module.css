@@ -7,32 +7,50 @@
 .addButton {
     background-color: red;
     color: white;
+    border: none;
+    padding: 1px 8px;
+    margin-left: 8px;
+    cursor: pointer;
+    border-radius: 2px;
   }
   
-  .removeButton {
+  /* .removeButton {
     background-color: green;
     color: white;
-  }
+  } */
 
   .container {
     display: flex;
-    position: relative;
+    justify-content: space-between;
+    padding: 20px;
   }
   
   .pokemonDetail {
     flex: 1; 
-    margin-right: 20px; 
+    margin-right: 100px; 
   }
   
   .favoritesList {
     width: 250px; 
   }
 
-  .separator {
+  .heading {
+    margin-bottom: 20px;
+}
+
+.pokemonList {
+    list-style-type: none;
+    padding: 0;
+}
+
+.pokemonListItem {
+    margin-bottom: 10px;
+}
+  /* .separator {
     height: 100%;
     width: 1px;
     background-color: #000;
     position: absolute;
     left: calc(100% - 250px); 
     top: 0;
-}
+} */

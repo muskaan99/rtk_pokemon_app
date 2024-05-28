@@ -7,3 +7,4 @@ export async function fetchPokemon() {
     }
     return response.json();
   }
+
