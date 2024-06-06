@@ -5,6 +5,16 @@
 }
 
 .addButton {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 1px 8px;
+  margin-left: 8px;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+  .removeButton {
     background-color: red;
     color: white;
     border: none;
@@ -13,17 +23,15 @@
     cursor: pointer;
     border-radius: 2px;
   }
-  
-  /* .removeButton {
-    background-color: green;
-    color: white;
-  } */
 
   .container {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     padding: 20px;
+    background-color: #d5def1f6;
   }
+  
   
   .pokemonDetail {
     flex: 1; 
@@ -31,9 +39,9 @@
   }
   
   .favoritesList {
-    width: 250px; 
+    flex: 1;
   }
-
+  
   .heading {
     margin-bottom: 20px;
 }
@@ -46,11 +54,9 @@
 .pokemonListItem {
     margin-bottom: 10px;
 }
-  /* .separator {
-    height: 100%;
-    width: 1px;
-    background-color: #000;
-    position: absolute;
-    left: calc(100% - 250px); 
-    top: 0;
-} */
+  
+
+.scrollableList {
+  max-height: 400px; 
+  overflow-y: auto;
+}

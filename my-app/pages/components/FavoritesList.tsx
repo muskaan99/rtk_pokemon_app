@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../store/store";
 import { removeFromFavorites } from "../store/pokemonSlice";
 
-import styles from '../../styles/FavoritesList.module.css';
+import styles from '../../styles/PokemonDetails.module.css';
 
 const FavoritesList: React.FC = () => {
   const dispatch = useDispatch();
@@ -15,20 +15,22 @@ const FavoritesList: React.FC = () => {
 
   return (
     <div>
-      <h1>Favorites List </h1>
-      <ul>
+       <div className={styles.pokemonDetail}> 
+       <h1 className={styles.heading}>Favorites </h1>
+       <ul className={`${styles.pokemonList} ${styles.scrollableList}`}>
         {favorites.map((pokemon: any) => (
           <li key={pokemon.url} className={`${styles.pokemonItem} ${styles.pokemonListItem}`}>
             {pokemon.name}
             <button 
             className={styles.removeButton}
             onClick={() => handleRemoveFromFavorites(pokemon.url)}>
-            Remove
+            -
             </button>
           </li>
         ))}
       </ul>
       
+      </div>
     </div>
   );
 };
