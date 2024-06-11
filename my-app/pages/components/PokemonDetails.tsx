@@ -43,7 +43,7 @@ const PokemonDetails: React.FC = () => {
     <div className={styles.container}>
        <div className={styles.pokemonDetail}> 
        <h1 className={styles.heading}>Pokemon List</h1>
-       <ul className={styles.pokemonList}>
+       <ul className={`${styles.pokemonList} ${styles.scrollableList}`}>
         {pokemons.map((pokemon: any) => (
           <li key={pokemon.url} className={`${styles.pokemonItem} ${styles.pokemonListItem}`}>
             <Link href={`/pokemon/${pokemon.name}`}>{pokemon.name}</Link>
@@ -51,19 +51,12 @@ const PokemonDetails: React.FC = () => {
                 className={styles.addButton}
                 onClick={() => handleAddToFavorites(pokemon)}
               >
-                Add
+                +
               </button>
-              {/* <button
-                className={styles.removeButton}
-                onClick={() => handleRemoveFromFavorites(pokemon.url)}
-              >
-                Remove
-              </button> */}
           </li>
         ))}
       </ul>
       </div>
-      {/* <div className={styles.separator}></div> */}
       <div className={styles.favoritesList}>
         <FavoritesList />
       </div>
